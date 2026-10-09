@@ -1,0 +1,29 @@
+{
+    "watch_folder": "C:\\Chemin\\Vers\\Dossier\\Surveille",
+    "archive_folder": "C:\\Chemin\\Vers\\Dossier\\Surveille\\Archives",
+    "archive_retention_hours": 48,
+    "sending_age_minimum": 300,
+    "purge_every_n_cycles": 1800,
+    "file_filter": "*.txt",
+    "remote_path": "/remote/sftp/path/",
+
+    "hostname": "sftp.example.com",
+    "port": 22,
+    "username": "sftp_user",
+    "password": "CHANGEZ_MOI",
+    "private_key_path": null,
+    "known_hosts_file": "C:\\Chemin\\Vers\\known_hosts",
+
+    "check_interval": 2,
+    "temps_attente": 1,
+    "retries_stabilite": 4,
+    "stability_confirmations": 2,
+    "retries": 3,
+
+    "activer_logs": true,
+    "log_file": "C:\\Chemin\\Vers\\logs\\sftp_courier.log",
+    "log_level": "INFO",
+    "log_backup_count": 30,
+
+    "lock_file": "C:\\Chemin\\Vers\\sftp_courier.lock"
+}

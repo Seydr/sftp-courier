@@ -1,0 +1,36 @@
+# Configuration reelle (contient le mot de passe)
+config.json
+
+# Fichiers d'etat
+*.lock
+*.sending
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Windows
+Thumbs.db
+desktop.ini
