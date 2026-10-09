@@ -98,7 +98,7 @@ Déposez un fichier correspondant au filtre dans `watch_folder` et vérifiez les
 | :--- | :--- | :--- |
 | `watch_folder` | string | Dossier à surveiller (local ou UNC) |
 | `archive_folder` | string | Dossier d'archivage après envoi réussi |
-| `file_filter` | string | Filtre de fichiers (ex: `*.txt`, `*.BL`) |
+| `file_filter` | string | Filtre de fichiers (ex: `*.txt`, `*.csv`) |
 | `check_interval` | number | Intervalle de scan en secondes |
 
 ### Archivage
@@ -179,7 +179,7 @@ nssm start SftpCourier
 | Situation | Comportement |
 | :--- | :--- |
 | Fichier en cours d'écriture | Attend la stabilité (max ~8 s) |
-| Coupure réseau pendant upload | Restaure le fichier en `.BL` pour retry |
+| Coupure réseau pendant upload | Restaure le fichier dans son nom d'origine pour retry |
 | Coupure SFTP prolongée | Reconnexion auto (3 tentatives) |
 | Échec définitif de reconnexion | Arrêt en erreur → NSSM redémarre |
 | Crash pendant un upload | Le `.sending` est déplacé dans `Archives/*_incertain_*` |
@@ -213,7 +213,3 @@ Puis redémarrer le service. Attention : le mode DEBUG génère beaucoup de volu
 ## Licence
 
 MIT — voir le fichier [LICENSE](LICENSE).
-
----
-
-*Développé à l'origine pour un besoin d'envoi automatique de Bons de Livraison, ce script est générique et peut être adapté à tout flux de fichiers.*
